@@ -20,18 +20,37 @@ const View = () => {
 
   return (
     <Layout>
-      <h2>{item?.title}</h2>
-      <div>
-        {item?.cover ? (
-          <img src={item.cover} width="400" alt={item.name} />
-        ) : (
-          ""
-        )}
+      <div className="row mt-5">
+        <div className="col-4">
+          {item?.cover ? (
+            <img
+              src={item.cover}
+              width="400"
+              alt={item.name}
+              className="img-thumbnail animate__animated animate__flip"
+            />
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="col-8">
+          <h3>{item?.title}</h3>
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">
+              <b>Author:</b> {item?.author}
+            </li>
+            <li className="list-group-item">
+              <b>Introduction:</b> {item?.intro}
+            </li>
+            <li className="list-group-item">
+              <b>Completed:</b> {item?.completed ? "Leído" : "Por terminar"}
+            </li>
+            <li className="list-group-item">
+              <b>Review:</b> {item?.review}
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>{item?.author}</div>
-      <div>{item?.intro}</div>
-      <div>{item?.completed ? "Leído" : "Por terminar"}</div>
-      <div>{item?.review}</div>
     </Layout>
   );
 };

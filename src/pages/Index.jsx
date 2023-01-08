@@ -6,9 +6,13 @@ const Index = () => {
   const store = useAppContext();
   return (
     <Layout>
-      {store.items.map((item) => (
-        <Book key={item.id} item={item} />
-      ))}
+      <h1>Home</h1>
+      <hr />
+      <div className="card-columns animate__animated animate__fadeInRight">
+        {store.items.map((item) => (
+          <Book key={item.id} item={item} />
+        ))}
+      </div>
     </Layout>
   );
 };
