@@ -71,67 +71,96 @@ const Create = () => {
 
   return (
     <Layout>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <div>Title</div>
-          <input
-            onChange={handleChange}
-            name="title"
-            type="text"
-            value={title}
-          />
-        </div>
+      <div>
+        <h1>Create new book</h1>
+        <hr />
+        <div className="row">
+          <div className="col-12">
+            <form onSubmit={handleSubmit}>
+              <div>
+                <div>Title</div>
+                <input
+                  className="form-control"
+                  onChange={handleChange}
+                  name="title"
+                  type="text"
+                  value={title}
+                />
+              </div>
 
-        <div>
-          <div>Author</div>
-          <input
-            onChange={handleChange}
-            name="author"
-            type="text"
-            value={author}
-          />
-        </div>
+              <div>
+                <div>Author</div>
+                <input
+                  className="form-control"
+                  onChange={handleChange}
+                  name="author"
+                  type="text"
+                  value={author}
+                />
+              </div>
 
-        <div>
-          <div>Cover</div>
-          <input onChange={handleOnChangeFile} name="cover" type="file" />
-          <div>
-            {!!cover ? <img src={cover} width="200" alt="preview" /> : ""}
+              <div>
+                <div>Cover</div>
+                <input onChange={handleOnChangeFile} name="cover" type="file" />
+                <div>
+                  {!!cover ? <img src={cover} width="200" alt="preview" /> : ""}
+                </div>
+              </div>
+
+              <div>
+                <div>Introduction</div>
+                <input
+                  className="form-control"
+                  onChange={handleChange}
+                  name="intro"
+                  type="text"
+                  value={intro}
+                />
+              </div>
+
+              {/* <div>
+                <div>Completed</div>
+                <input
+                  onChange={handleChange}
+                  name="completed"
+                  type="checkbox"
+                  value={completed}
+                />
+              </div> */}
+              <div className="form-check">
+                <input
+                  onChange={handleChange}
+                  name="completed"
+                  className="form-check-input"
+                  type="checkbox"
+                  value={completed}
+                  id="completed"
+                />
+                <label className="form-check-label" htmlFor="completed">
+                  Completed
+                </label>
+              </div>
+
+              <div>
+                <div>Review</div>
+                <input
+                  className="form-control"
+                  onChange={handleChange}
+                  name="review"
+                  type="text"
+                  value={review}
+                />
+              </div>
+
+              <input
+                className="buttonCreate btn btn-warning mt-2 btn-block"
+                type="submit"
+                value="Register Book"
+              />
+            </form>
           </div>
         </div>
-
-        <div>
-          <div>Introduction</div>
-          <input
-            onChange={handleChange}
-            name="intro"
-            type="text"
-            value={intro}
-          />
-        </div>
-
-        <div>
-          <div>Completed</div>
-          <input
-            onChange={handleChange}
-            name="completed"
-            type="checkbox"
-            value={completed}
-          />
-        </div>
-
-        <div>
-          <div>Review</div>
-          <input
-            onChange={handleChange}
-            name="review"
-            type="text"
-            value={review}
-          />
-        </div>
-
-        <input type="submit" value="Register Book" />
-      </form>
+      </div>
     </Layout>
   );
 };

@@ -18,7 +18,7 @@ const Book = ({ item }) => {
         <div className="col-md-8">
           <div className="card-body">
             <h5 className="card-title"> {item.title} </h5>
-            <p className="card-text"> {item.intro} </p>
+            <p className="card-text"> {item.author} </p>
             <p className="card-text">
               <small className="text-muted">
                 {item?.completed ? "Leído" : "Por terminar"}{" "}
