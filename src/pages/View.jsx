@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Layout from "../components/layout";
 import { useAppContext } from "../store/store";
 
@@ -49,6 +49,9 @@ const View = () => {
               <b>Review:</b> {item?.review}
             </li>
           </ul>
+          <button className="btn btn-outline-info">
+            <Link to="/">Return</Link>
+          </button>
         </div>
       </div>
     </Layout>

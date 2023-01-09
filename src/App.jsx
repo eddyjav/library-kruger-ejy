@@ -9,13 +9,15 @@ import Store from "./store/store";
 function App() {
   return (
     <Store>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="create" element={<Create />} />
-          <Route path="view/:bookId" element={<View />} />
-        </Routes>
-      </BrowserRouter>
+      <div className="container mt-2">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="create" element={<Create />} />
+            <Route path="view/:bookId" element={<View />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </Store>
   );
 }
