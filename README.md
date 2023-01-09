@@ -16,7 +16,7 @@ https://library-kruger-ejy.vercel.app/
 
 ## 🛠 Build With
 
-- ⚛️ React
+- ⚛️ React - Vite
 - 🧱 HTML
 - 🎨 CSS
 - 🚀 Git
